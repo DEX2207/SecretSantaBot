@@ -3284,23 +3284,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DEX 22\\.nuget\\packages\\": {},
-    "F:\\Microsoft\\MVS\\NuGetPackages": {}
+    "C:\\Users\\Декс\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\1111\\c#-projects\\Rider projects\\SecretSantaBot\\SecretSanta_bot\\SecretSanta_bot\\SecretSanta_bot.csproj",
+      "projectUniqueName": "D:\\INTER (E)\\1111\\c#-projects\\SecretSantaBot\\SecretSanta_bot\\SecretSanta_bot\\SecretSanta_bot.csproj",
       "projectName": "SecretSanta_bot",
-      "projectPath": "E:\\1111\\c#-projects\\Rider projects\\SecretSantaBot\\SecretSanta_bot\\SecretSanta_bot\\SecretSanta_bot.csproj",
-      "packagesPath": "C:\\Users\\DEX 22\\.nuget\\packages\\",
-      "outputPath": "E:\\1111\\c#-projects\\Rider projects\\SecretSantaBot\\SecretSanta_bot\\SecretSanta_bot\\obj\\",
+      "projectPath": "D:\\INTER (E)\\1111\\c#-projects\\SecretSantaBot\\SecretSanta_bot\\SecretSanta_bot\\SecretSanta_bot.csproj",
+      "packagesPath": "C:\\Users\\Декс\\.nuget\\packages\\",
+      "outputPath": "D:\\INTER (E)\\1111\\c#-projects\\SecretSantaBot\\SecretSanta_bot\\SecretSanta_bot\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "F:\\Microsoft\\MVS\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\DEX 22\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Декс\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3315,8 +3315,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "E:\\1111\\c#-projects\\Rider projects\\SecretSantaBot\\SecretSanta_bot\\SecretSantaBotDal\\SecretSantaBotDal.csproj": {
-              "projectPath": "E:\\1111\\c#-projects\\Rider projects\\SecretSantaBot\\SecretSanta_bot\\SecretSantaBotDal\\SecretSantaBotDal.csproj"
+            "D:\\INTER (E)\\1111\\c#-projects\\SecretSantaBot\\SecretSanta_bot\\SecretSantaBotDal\\SecretSantaBotDal.csproj": {
+              "projectPath": "D:\\INTER (E)\\1111\\c#-projects\\SecretSantaBot\\SecretSanta_bot\\SecretSantaBotDal\\SecretSantaBotDal.csproj"
             }
           }
         }
@@ -3329,7 +3329,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       },
       "SdkAnalysisLevel": "9.0.100"
     },
@@ -3376,7 +3376,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Декс\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

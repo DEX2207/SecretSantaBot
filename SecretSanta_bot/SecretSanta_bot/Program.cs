@@ -69,7 +69,12 @@ internal class Program
                 switch (update.Message?.Text.Split(' ')[0])
                 {
                     case "/start":
-                        if (update.Message.From.Id == admin.AdminId)
+                        if (update.Message.Chat.Id == update.Message.From.Id)
+                        {
+                            await client.SendTextMessageAsync(update.Message?.Chat.Id ?? 5214455564, 
+                                $"Привет, я бот Тайного Санты! К сожалению, я работаю только в групповых чатах Telegram :( ");
+                        }
+                        else if (update.Message.From.Id == admin.AdminId)
                         {
                             if (update.Message.Text.Split(' ').Length > 1 && double.TryParse(update.Message.Text.Split(' ')[1], out double maxPrice))
                             {
@@ -89,7 +94,12 @@ internal class Program
                         }
                         break;
                     case "/stop":
-                        if (update.Message.From.Id == admin.AdminId)
+                        if (update.Message.Chat.Id == update.Message.From.Id)
+                        {
+                            await client.SendTextMessageAsync(update.Message?.Chat.Id ?? 5214455564, 
+                                $"Привет, я бот Тайного Санты! К сожалению, я работаю только в групповых чатах Telegram :( ");
+                        }
+                        else if (update.Message.From.Id == admin.AdminId)
                         {
                             var gamers = _gamerStorage.GetAll().Where(x=>x.ChatId == admin.ChatId).ToList();
                             admin.Maxprice = null;
@@ -117,7 +127,12 @@ internal class Program
                         }
                         break;
                     case "/reset":
-                        if (update.Message.From.Id == admin.AdminId)
+                        if (update.Message.Chat.Id == update.Message.From.Id)
+                        {
+                            await client.SendTextMessageAsync(update.Message?.Chat.Id ?? 5214455564, 
+                                $"Привет, я бот Тайного Санты! К сожалению, я работаю только в групповых чатах Telegram :( ");
+                        }
+                        else if (update.Message.From.Id == admin.AdminId)
                         {
                             var gamers = _gamerStorage.GetAll().Where(x=>x.ChatId == admin.ChatId).ToList();
                             foreach (var gamer in gamers)
@@ -139,7 +154,12 @@ internal class Program
                         }
                         break;
                     case "/join":
-                        if (admin.Gamestatus == GameStatus.GameStarted)
+                        if (update.Message.Chat.Id == update.Message.From.Id)
+                        {
+                            await client.SendTextMessageAsync(update.Message?.Chat.Id ?? 5214455564, 
+                                $"Привет, я бот Тайного Санты! К сожалению, я работаю только в групповых чатах Telegram :( ");
+                        }
+                        else if (admin.Gamestatus == GameStatus.GameStarted)
                         {
                             await client.SendTextMessageAsync(update.Message?.Chat.Id ?? 5214455564, $"Спасибо, что участвуете в нашей игре,{update.Message.From.FirstName}!");
                             var newgamer = new Gamer(update.Message.Chat.Id,update.Message.From.Id,update.Message.From.Username);
@@ -182,6 +202,17 @@ checkgoto:
                         else
                         {
                             await client.SendTextMessageAsync(update.Message?.Chat.Id ?? 5214455564, "Игра не начата");
+                        }
+                        break;
+                    case "/help":
+                        if (update.Message.Chat.Id == update.Message.From.Id)
+                        {
+                            await client.SendTextMessageAsync(update.Message?.Chat.Id ?? 5214455564, 
+                                $"Привет, я бот Тайного Санты! К сожалению, я работаю только в групповых чатах Telegram :( ");
+                        }
+                        else
+                        {
+                            await client.SendTextMessageAsync(update.Message?.Chat.Id ?? 5214455564, "Мои команды: \nКоманды администратора: \n/start <сумма подарка>-запуск игры \n/stop-завершение игры \n/reset-сброс игры (участники удаляются, но игра продолжается со старыми параметрами) \nКоманды участников: \n/join-присоединиться к игре");
                         }
                         break;
                     default:
